@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learnflutter/screens/HomePage.dart';
+import 'package:learnflutter/screens/PostProperty.dart';
+import 'package:learnflutter/screens/SignUpPage.dart';
 import 'Constants/Constants.dart';
 import 'Constants/Dimens.dart';
 
@@ -42,7 +44,14 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(title: Text("Welcome"), actions: [
         MaterialButton(
-          onPressed: () {},
+          onPressed: () {
+            SnackBar(content: Text("Post Property Clicked !"));
+            //Condition to check isLoggedin or not
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const SignUppage()),
+            );
+          },
           child: Text("Post Property"),
         ),
       ]),
@@ -234,6 +243,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   onItemTapped(int index) {
+    SnackBar(content: Text("Clicked $index !"));
     setState(() {
       _selectedIndex = index;
     });
