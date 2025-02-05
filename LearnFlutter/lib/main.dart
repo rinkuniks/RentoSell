@@ -39,6 +39,20 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
 
+  static const TextStyle optionStyle =
+  TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static const List<Widget> _widgetOptions = <Widget>[
+    Homepage(),
+    Text(
+      'Index 1: Business',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 2: School',
+      style: optionStyle,
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -216,36 +230,34 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: "Home",
+            label: 'Home',
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.account_balance_rounded), label: "Projects"),
+            icon: Icon(Icons.business),
+            label: 'Business',
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.account_balance_wallet), label: "Sell/Rent"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.favorite_border), label: "Shortlist"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+            icon: Icon(Icons.school),
+            label: 'School',
+          ),
         ],
         currentIndex: _selectedIndex,
-        onTap: onItemTapped(_selectedIndex),
-        unselectedItemColor: Colors.blueGrey,
-        selectedItemColor: Colors.deepPurple,
-        selectedLabelStyle: TextStyle(color: Colors.purple),
-        unselectedLabelStyle: TextStyle(color: Colors.blueGrey),
+        selectedItemColor: Colors.amber[800],
+        onTap: _onItemTapped,
       ),
       body: Center(
-          child:
-              Homepage()), // This trailing comma makes auto-formatting nicer for build methods.
+          child:  _widgetOptions.elementAt(_selectedIndex),
+              // Homepage()
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 
-  onItemTapped(int index) {
-    SnackBar(content: Text("Clicked $index !"));
+  void _onItemTapped(int value) {
     setState(() {
-      _selectedIndex = index;
+      _selectedIndex = value;
     });
   }
 }
