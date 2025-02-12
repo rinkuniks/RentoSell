@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learnflutter/screens/MyHomePage.dart';
 import 'package:learnflutter/screens/MyHomePageNew.dart';
+import 'package:learnflutter/screens/OnBoardingScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: MyHomePage(),
-      home: MyHomePageNew(),
+      // home: MyHomePageNew(),
+      home: Onboardingscreen(),
     );
   }
 }

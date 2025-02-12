@@ -230,48 +230,9 @@ class _MyHomePageNewState extends State<MyHomePageNew> {
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 200,
-                color: Colors.deepPurple,
-              ),
+              child: _widgetOptions.elementAt(_selectedIndex),
             ),
           ),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 200,
-                color: Colors.deepPurple,
-              ),
-            ),
-          ),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 200,
-                color: Colors.deepPurple,
-              ),
-            ),
-          ),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 200,
-                color: Colors.deepPurple,
-              ),
-            ),
-          ),
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 200,
-                color: Colors.deepPurple,
-              ),
-            ),
-          )
         ],
       ),
     );

@@ -37,6 +37,7 @@ dependencies:
   fluttertoast: ^8.2.10
   flutter_otp_text_field: ^1.4.0+2
   carousel_slider: ^5.0.0
+  smooth_page_indicator:
 
 dev_dependencies:
   flutter_test:
