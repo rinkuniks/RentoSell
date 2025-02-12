@@ -3,14 +3,14 @@ import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 
 import '../Constants/Dimens.dart';
 
-class SignUppage extends StatefulWidget {
-  const SignUppage({super.key});
+class EnterMobileScreen extends StatefulWidget {
+  const EnterMobileScreen({super.key});
 
   @override
-  State<SignUppage> createState() => _SignUppageState();
+  State<EnterMobileScreen> createState() => _EnterMobileScreenState();
 }
 
-class _SignUppageState extends State<SignUppage> {
+class _EnterMobileScreenState extends State<EnterMobileScreen> {
   final TextEditingController _mobileController = TextEditingController();
 
   @override

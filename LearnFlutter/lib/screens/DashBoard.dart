@@ -4,14 +4,14 @@ import 'package:learnflutter/Constants/Constants.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import '../Constants/Dimens.dart';
 
-class Homepage extends StatefulWidget {
-  const Homepage({super.key});
+class DashBoard extends StatefulWidget {
+  const DashBoard({super.key});
 
   @override
-  State<Homepage> createState() => _HomepageState();
+  State<DashBoard> createState() => _DashBoardState();
 }
 
-class _HomepageState extends State<Homepage> {
+class _DashBoardState extends State<DashBoard> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
