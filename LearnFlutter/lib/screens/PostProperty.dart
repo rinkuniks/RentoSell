@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:learnflutter/screens/EnterMobileScreen.dart';
 
 class Postproperty extends StatefulWidget {
   const Postproperty({super.key});
