@@ -20,7 +20,7 @@ class _SignUppageState extends State<SignUppage> {
         title: Text("Login"),
       ),
       body: Container(
-        margin: const EdgeInsets.all(Dimens.fourty),
+        margin: const EdgeInsets.all(Dimens.forty),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -35,7 +35,7 @@ class _SignUppageState extends State<SignUppage> {
               maxLength: 10,
             ),
             SizedBox(
-              height: Dimens.tweleve,
+              height: Dimens.twelve,
             ),
             OtpTextField(
               numberOfFields: 6,
@@ -60,7 +60,7 @@ class _SignUppageState extends State<SignUppage> {
               }, // end onSubmit
             ),
             SizedBox(
-              height: Dimens.tweleve,
+              height: Dimens.twelve,
             ),
             OutlinedButton(
                 onPressed: () {

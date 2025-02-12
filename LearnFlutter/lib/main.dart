@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
               image: NetworkImage(Constants.StaticImage),
             ),
             Container(
-              margin: const EdgeInsets.only(top: Dimens.tweleve),
+              margin: const EdgeInsets.only(top: Dimens.twelve),
               child: Text(
                 "Welcome \nNikhil Kumar Singh",
                 style: TextStyle(
@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Container(
               margin: const EdgeInsets.only(
-                  right: Dimens.tweleve, left: Dimens.tweleve),
+                  right: Dimens.twelve, left: Dimens.twelve),
               child: Divider(
                 thickness: 1,
                 color: Colors.black26,
@@ -114,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       backgroundImage: NetworkImage(Constants.StaticImage),
                     ),
                     SizedBox(
-                      width: Dimens.tweleve,
+                      width: Dimens.twelve,
                     ),
                     Text(
                       "Post Property",
@@ -122,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ]),
                   SizedBox(
-                    height: Dimens.tweleve,
+                    height: Dimens.twelve,
                   ),
                   Row(mainAxisAlignment: MainAxisAlignment.start, children: [
                     Image.asset(
@@ -130,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         width: Dimens.thirtyTwo,
                         Constants.WhatsAppImage),
                     SizedBox(
-                      width: Dimens.tweleve,
+                      width: Dimens.twelve,
                     ),
                     Text(
                       "Post Property on whatsApp",
@@ -138,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ]),
                   SizedBox(
-                    height: Dimens.tweleve,
+                    height: Dimens.twelve,
                   ),
                   Row(mainAxisAlignment: MainAxisAlignment.start, children: [
                     CircleAvatar(
@@ -146,7 +146,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       backgroundImage: NetworkImage(Constants.StaticImage),
                     ),
                     SizedBox(
-                      width: Dimens.tweleve,
+                      width: Dimens.twelve,
                     ),
                     Text(
                       "Search Properties",
@@ -158,14 +158,14 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Container(
               margin: const EdgeInsets.only(
-                  right: Dimens.tweleve, left: Dimens.tweleve),
+                  right: Dimens.twelve, left: Dimens.twelve),
               child: Divider(
                 thickness: 1,
                 color: Colors.black26,
               ),
             ),
             Container(
-              margin: const EdgeInsets.all(Dimens.tweleve),
+              margin: const EdgeInsets.all(Dimens.twelve),
               child: Column(
                 children: [
                   Row(mainAxisAlignment: MainAxisAlignment.start, children: [
@@ -174,7 +174,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       backgroundImage: NetworkImage(Constants.StaticImage),
                     ),
                     SizedBox(
-                      width: Dimens.tweleve,
+                      width: Dimens.twelve,
                     ),
                     Text(
                       "HomePage",
@@ -186,7 +186,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.black26,
                   ),
                   SizedBox(
-                    height: Dimens.tweleve,
+                    height: Dimens.twelve,
                   ),
                   Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -204,19 +204,19 @@ class _MyHomePageState extends State<MyHomePage> {
                             width: Dimens.twentyEight,
                             Constants.YoutubeImage),
                       ]),
-                  SizedBox(height: Dimens.tweleve),
+                  SizedBox(height: Dimens.twelve),
                   Divider(
                     thickness: 1,
                     color: Colors.black26,
                   ),
-                  SizedBox(height: Dimens.tweleve),
+                  SizedBox(height: Dimens.twelve),
                   Row(mainAxisAlignment: MainAxisAlignment.start, children: [
                     Image.asset(
                         height: Dimens.twentyEight,
                         width: Dimens.twentyEight,
                         Constants.Logout),
                     SizedBox(
-                      width: Dimens.tweleve,
+                      width: Dimens.twelve,
                     ),
                     Text(
                       "Sign In / Sign Out",
