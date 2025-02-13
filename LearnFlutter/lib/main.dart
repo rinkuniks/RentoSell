@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learnflutter/screens/MyHomePage.dart';
-import 'package:learnflutter/screens/MyHomePageNew.dart';
-import 'package:learnflutter/screens/OnBoardingScreen.dart';
-import 'package:learnflutter/screens/auth/SignUpScreen.dart';
+import 'package:learnflutter/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: Onboardingscreen(),
-      home: Signupscreen(),
+      home: SplashScreen(),
     );
   }
 }
