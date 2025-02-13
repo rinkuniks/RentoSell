@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:learnflutter/screens/MyHomePage.dart';
 import 'package:learnflutter/screens/MyHomePageNew.dart';
 import 'package:learnflutter/screens/OnBoardingScreen.dart';
+import 'package:learnflutter/screens/auth/SignUpScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,9 +21,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      // home: MyHomePage(),
-      // home: MyHomePageNew(),
-      home: Onboardingscreen(),
+      // home: Onboardingscreen(),
+      home: Signupscreen(),
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 
-import '../Constants/Dimens.dart';
+import '../../Constants/Dimens.dart';
 
 class EnterMobileScreen extends StatefulWidget {
   const EnterMobileScreen({super.key});

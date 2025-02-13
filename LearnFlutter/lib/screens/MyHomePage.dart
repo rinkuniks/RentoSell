@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learnflutter/screens/EnterMobileScreen.dart';
+import 'package:learnflutter/screens/auth/EnterMobileScreen.dart';
 
 import '../Constants/Constants.dart';
 import '../Constants/Dimens.dart';

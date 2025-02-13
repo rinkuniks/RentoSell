@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:learnflutter/Constants/Dimens.dart';
+import 'package:learnflutter/screens/auth/SignUpScreen.dart';
 
 import '../Constants/Constants.dart';
 import 'DashBoard.dart';
 
 class MyHomePageNew extends StatefulWidget {
-
   MyHomePageNew({super.key});
 
   @override
@@ -15,7 +15,7 @@ class MyHomePageNew extends StatefulWidget {
 class _MyHomePageNewState extends State<MyHomePageNew> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
-  TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     DashBoard(),
     Text(
@@ -180,9 +180,17 @@ class _MyHomePageNewState extends State<MyHomePageNew> {
                     SizedBox(
                       width: Dimens.twelve,
                     ),
-                    Text(
-                      "Sign In / Sign Out",
-                      textAlign: TextAlign.center,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return Signupscreen();
+                        }));
+                      },
+                      child: Text(
+                        "Sign In / Sign Out",
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ]),
                 ],
@@ -214,18 +222,20 @@ class _MyHomePageNewState extends State<MyHomePageNew> {
         slivers: [
           //Sliver App Bar
           SliverAppBar(
-            backgroundColor: Colors.deepPurple[300],
-            expandedHeight: Dimens.twoHundred,
-            floating: true,
-            pinned: true,
-            snap: true,
-            flexibleSpace: FlexibleSpaceBar(
-              background: Container(
-                color: Colors.pink,
-              ),
-              title: Text("W E L C O M E", style: TextStyle(color: Colors.white),),
-            )
-          ),
+              backgroundColor: Colors.deepPurple[300],
+              expandedHeight: Dimens.twoHundred,
+              floating: true,
+              pinned: true,
+              snap: true,
+              flexibleSpace: FlexibleSpaceBar(
+                background: Container(
+                  color: Colors.pink,
+                ),
+                title: Text(
+                  "W E L C O M E",
+                  style: TextStyle(color: Colors.white),
+                ),
+              )),
           //Sliver List
           SliverToBoxAdapter(
             child: Padding(
