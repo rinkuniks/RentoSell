@@ -5,14 +5,14 @@ import 'package:learnflutter/screens/intro_screens/page_two.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'intro_screens/page_one.dart';
 
-class Onboardingscreen extends StatefulWidget {
-  const Onboardingscreen({super.key});
+class OnBoardingScreen extends StatefulWidget {
+  const OnBoardingScreen({super.key});
 
   @override
-  State<Onboardingscreen> createState() => _OnboardingscreenState();
+  State<OnBoardingScreen> createState() => _OnBoardingScreenState();
 }
 
-class _OnboardingscreenState extends State<Onboardingscreen> {
+class _OnBoardingScreenState extends State<OnBoardingScreen> {
   PageController _controller = PageController();
   bool onLastPage = false;
 
