@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 
-import '../Constants/Dimens.dart';
+import '../../Constants/Dimens.dart';
 
-class SignUppage extends StatefulWidget {
-  const SignUppage({super.key});
+class EnterMobileScreen extends StatefulWidget {
+  const EnterMobileScreen({super.key});
 
   @override
-  State<SignUppage> createState() => _SignUppageState();
+  State<EnterMobileScreen> createState() => _EnterMobileScreenState();
 }
 
-class _SignUppageState extends State<SignUppage> {
+class _EnterMobileScreenState extends State<EnterMobileScreen> {
   final TextEditingController _mobileController = TextEditingController();
 
   @override
@@ -20,7 +20,7 @@ class _SignUppageState extends State<SignUppage> {
         title: Text("Login"),
       ),
       body: Container(
-        margin: const EdgeInsets.all(Dimens.fourty),
+        margin: const EdgeInsets.all(Dimens.forty),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -35,7 +35,7 @@ class _SignUppageState extends State<SignUppage> {
               maxLength: 10,
             ),
             SizedBox(
-              height: Dimens.tweleve,
+              height: Dimens.twelve,
             ),
             OtpTextField(
               numberOfFields: 6,
@@ -60,7 +60,7 @@ class _SignUppageState extends State<SignUppage> {
               }, // end onSubmit
             ),
             SizedBox(
-              height: Dimens.tweleve,
+              height: Dimens.twelve,
             ),
             OutlinedButton(
                 onPressed: () {

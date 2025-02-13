@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:learnflutter/screens/SignUpPage.dart';
 import '../Constants/Constants.dart';
 import '../Constants/Dimens.dart';
 
