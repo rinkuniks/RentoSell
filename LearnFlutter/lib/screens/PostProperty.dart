@@ -1,17 +1,46 @@
 import 'package:flutter/material.dart';
 import 'package:learnflutter/screens/SignUpPage.dart';
+import '../Constants/Constants.dart';
+import '../Constants/Dimens.dart';
 
-class Postproperty extends StatefulWidget {
-  const Postproperty({super.key});
+class PostProperty extends StatefulWidget {
+  const PostProperty({super.key});
 
   @override
-  State<Postproperty> createState() => _PostpropertyState();
+  State<PostProperty> createState() => _PostPropertyState();
 }
 
-class _PostpropertyState extends State<Postproperty> {
+class _PostPropertyState extends State<PostProperty> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+          actions: [
+            MaterialButton(
+              onPressed: () {
+                //Condition to check isLoggedin or not
+              },
+              child: Row(
+                children: [
+                  Text("Post via WhatsApp"),
+                  SizedBox(width: Dimens.eight),
+                  Image.asset(Constants.WhatsAppImage,
+                      width: Dimens.twentyFour,
+                      height: Dimens.twentyFour),
+                ],
+              ),
+            ),
+          ]),
+      body: Column(
+        children: [
+          Text("Add Basic Details"),
+          Text("You are looking to?"),
+          ListView.builder(itemBuilder: (context, index){
+
+          })
+        ],
+      ),
+    );
   }
 }
