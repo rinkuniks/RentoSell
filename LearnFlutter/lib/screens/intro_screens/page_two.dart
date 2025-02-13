@@ -5,6 +5,11 @@ class IntroPageTwo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: Colors.red[100],
+      body: Center(
+        child: Text("Page Two"),
+      ),
+    );
   }
 }
