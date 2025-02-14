@@ -2,6 +2,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:learnflutter/Constants/Dimens.dart';
 import 'package:learnflutter/screens/auth/SignUpScreen.dart';
+import 'package:learnflutter/screens/settings/settings_screen.dart';
 
 import '../Constants/Constants.dart';
 import 'DashBoard.dart';
@@ -27,6 +28,7 @@ class _MyHomePageNewState extends State<MyHomePageNew> {
       'Index 2: School',
       style: optionStyle,
     ),
+    SettingsScreen()
   ];
 
   @override
@@ -214,6 +216,7 @@ class _MyHomePageNewState extends State<MyHomePageNew> {
         Icon(Icons.home, color: Colors.white,),
         Icon(Icons.business, color: Colors.white,),
         Icon(Icons.school, color: Colors.white,),
+        Icon(Icons.settings, color: Colors.white,),
       ]),
       body: CustomScrollView(
         slivers: [
