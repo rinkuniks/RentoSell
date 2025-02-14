@@ -1,3 +1,4 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:learnflutter/Constants/Dimens.dart';
 import 'package:learnflutter/screens/auth/SignUpScreen.dart';
@@ -31,6 +32,7 @@ class _MyHomePageNewState extends State<MyHomePageNew> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.deepPurple,
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -199,37 +201,32 @@ class _MyHomePageNewState extends State<MyHomePageNew> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
-        onTap: _onItemTapped,
-      ),
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.deepPurple,
+          color: Colors.deepPurple.shade200,
+          animationDuration: Duration(milliseconds: 300),
+          onTap: (index){
+            setState(() {
+              _selectedIndex = index;
+            });
+          },
+          items: [
+        Icon(Icons.home, color: Colors.white,),
+        Icon(Icons.business, color: Colors.white,),
+        Icon(Icons.school, color: Colors.white,),
+      ]),
       body: CustomScrollView(
         slivers: [
           //Sliver App Bar
           SliverAppBar(
-              backgroundColor: Colors.deepPurple[300],
+              backgroundColor: Colors.pink[300],
               expandedHeight: Dimens.twoHundred,
               floating: true,
               pinned: true,
               snap: true,
               flexibleSpace: FlexibleSpaceBar(
                 background: Container(
-                  color: Colors.pink,
+                  color: Colors.deepPurple.shade200,
                 ),
                 title: Text(
                   "W E L C O M E",
