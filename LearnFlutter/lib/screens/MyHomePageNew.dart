@@ -238,19 +238,10 @@ class _MyHomePageNewState extends State<MyHomePageNew> {
               )),
           //Sliver List
           SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: _widgetOptions.elementAt(_selectedIndex),
-            ),
+            child: _widgetOptions.elementAt(_selectedIndex),
           ),
         ],
       ),
     );
-  }
-
-  void _onItemTapped(int value) {
-    setState(() {
-      _selectedIndex = value;
-    });
   }
 }
