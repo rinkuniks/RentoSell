@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:learnflutter/components/my_button.dart';
 import 'package:learnflutter/components/my_text_field.dart';
-
 import '../../Constants/Dimens.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -32,12 +32,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              padding: const EdgeInsets.only(
-                  left: Dimens.twentyFour, top: Dimens.fifty),
-              child: Icon(
-                Icons.arrow_back,
-                color: Colors.white,
+            GestureDetector(
+              onTap: (){
+                Navigator.pop(context);
+              },
+              child: Container(
+                padding: const EdgeInsets.only(
+                    left: Dimens.twentyFour, top: Dimens.fifty),
+                child: Icon(
+                  Icons.arrow_back,
+                  color: Colors.white,
+                ),
               ),
             ),
             SizedBox(
@@ -142,6 +147,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ),
                           ),
                           Divider(thickness: 1,),
+                          MyButton(btnText: "Logout", onTap: (){})
                         ],
                       ),
                     ),
