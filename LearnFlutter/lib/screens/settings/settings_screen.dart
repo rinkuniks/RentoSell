@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:learnflutter/Constants/Dimens.dart';
-import 'package:learnflutter/components/my_button.dart';
 import 'package:learnflutter/screens/settings/profile_screen.dart';
 
 class SettingsScreen extends StatefulWidget {

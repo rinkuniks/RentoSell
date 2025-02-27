@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:learnflutter/Constants/Dimens.dart';
 import 'package:learnflutter/components/my_button.dart';
 import 'package:learnflutter/components/my_text_field.dart';
-
 import '../../components/square_tile.dart';
+import 'auth_service.dart';
 
 class Signupscreen extends StatelessWidget {
   Signupscreen({super.key});
@@ -79,7 +79,7 @@ class Signupscreen extends StatelessWidget {
               ),
 
               //sign in btn
-              MyButton(btnText: "Sign-In", onTap: signUserIn),
+              MyButton(btnText: "Sign-In", onTap: () => signUserIn(context)),
               const SizedBox(
                 height: Dimens.fifty,
               ),
@@ -154,5 +154,17 @@ class Signupscreen extends StatelessWidget {
   }
 
   //login function for user sign in
-  void signUserIn() {}
+  void signUserIn(BuildContext context) async{
+    final authService = AuthService();
+    try{
+      await authService.signInWithEmailAndPassword(
+        usernameController.text, passwordController.text);
+    }catch(e){
+      showDialog(context: context, builder: (BuildContext context){
+        return AlertDialog(
+         title: Text(e.toString()),
+        );
+      });
+    }
+  }
 }

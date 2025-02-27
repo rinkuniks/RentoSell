@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:learnflutter/screens/auth/EnterMobileScreen.dart';
-
 import '../Constants/Constants.dart';
 import '../Constants/Dimens.dart';
 import 'DashBoard.dart';
@@ -49,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: EdgeInsets.zero,
           children: [
             const Image(
-              image: NetworkImage(Constants.StaticImage),
+              image: NetworkImage(Constants.staticImage),
             ),
             Container(
               margin: const EdgeInsets.only(top: Dimens.twelve),
@@ -86,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Row(mainAxisAlignment: MainAxisAlignment.start, children: [
                     CircleAvatar(
                       radius: Dimens.twenty,
-                      backgroundImage: NetworkImage(Constants.StaticImage),
+                      backgroundImage: NetworkImage(Constants.staticImage),
                     ),
                     SizedBox(
                       width: Dimens.twelve,
@@ -103,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Image.asset(
                         height: Dimens.thirtyTwo,
                         width: Dimens.thirtyTwo,
-                        Constants.WhatsAppImage),
+                        Constants.whatsAppImage),
                     SizedBox(
                       width: Dimens.twelve,
                     ),
@@ -118,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Row(mainAxisAlignment: MainAxisAlignment.start, children: [
                     CircleAvatar(
                       radius: Dimens.twenty,
-                      backgroundImage: NetworkImage(Constants.StaticImage),
+                      backgroundImage: NetworkImage(Constants.staticImage),
                     ),
                     SizedBox(
                       width: Dimens.twelve,
@@ -146,7 +145,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Row(mainAxisAlignment: MainAxisAlignment.start, children: [
                     CircleAvatar(
                       radius: Dimens.twenty,
-                      backgroundImage: NetworkImage(Constants.StaticImage),
+                      backgroundImage: NetworkImage(Constants.staticImage),
                     ),
                     SizedBox(
                       width: Dimens.twelve,
@@ -169,15 +168,15 @@ class _MyHomePageState extends State<MyHomePage> {
                         Image.asset(
                             height: Dimens.twentyEight,
                             width: Dimens.twentyEight,
-                            Constants.WhatsAppImage),
+                            Constants.whatsAppImage),
                         Image.asset(
                             height: Dimens.twentyEight,
                             width: Dimens.twentyEight,
-                            Constants.InstaImage),
+                            Constants.instagramImage),
                         Image.asset(
                             height: Dimens.twentyEight,
                             width: Dimens.twentyEight,
-                            Constants.YoutubeImage),
+                            Constants.youtubeImage),
                       ]),
                   SizedBox(height: Dimens.twelve),
                   Divider(
@@ -189,7 +188,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Image.asset(
                         height: Dimens.twentyEight,
                         width: Dimens.twentyEight,
-                        Constants.Logout),
+                        Constants.logout),
                     SizedBox(
                       width: Dimens.twelve,
                     ),

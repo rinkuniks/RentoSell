@@ -24,7 +24,7 @@ class _PostPropertyState extends State<PostProperty> {
                 children: [
                   Text("Post via WhatsApp"),
                   SizedBox(width: Dimens.eight),
-                  Image.asset(Constants.WhatsAppImage,
+                  Image.asset(Constants.whatsAppImage,
                       width: Dimens.twentyFour,
                       height: Dimens.twentyFour),
                 ],

@@ -101,7 +101,7 @@ Widget topSection() {
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset(Constants.WhatsAppImage,
+                          Image.asset(Constants.whatsAppImage,
                               width: Dimens.sixty,
                               height: Dimens.sixty),
                           SizedBox(height: Dimens.eight),
@@ -151,7 +151,7 @@ Widget midSection() {
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset(Constants.WhatsAppImage,
+                          Image.asset(Constants.whatsAppImage,
                               width: Dimens.sixty,
                               height: Dimens.sixty),
                           SizedBox(height: Dimens.eight),
@@ -201,7 +201,7 @@ Widget bottomSection() {
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset(Constants.WhatsAppImage,
+                          Image.asset(Constants.whatsAppImage,
                               width: Dimens.sixty,
                               height: Dimens.sixty),
                           SizedBox(height: Dimens.eight),
@@ -254,7 +254,7 @@ Widget popularCities() {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(Dimens.forty),
                           ),
-                          child: Image.asset(Constants.WhatsAppImage,
+                          child: Image.asset(Constants.whatsAppImage,
                               width: Dimens.sixty,
                               height: Dimens.sixty),
                         ),

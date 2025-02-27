@@ -2,13 +2,13 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:learnflutter/Constants/Dimens.dart';
 import 'package:learnflutter/screens/auth/SignUpScreen.dart';
+import 'package:learnflutter/screens/auth/auth_service.dart';
 import 'package:learnflutter/screens/settings/settings_screen.dart';
-
 import '../Constants/Constants.dart';
 import 'DashBoard.dart';
 
 class MyHomePageNew extends StatefulWidget {
-  MyHomePageNew({super.key});
+  const MyHomePageNew({super.key});
 
   @override
   State<MyHomePageNew> createState() => _MyHomePageNewState();
@@ -40,7 +40,7 @@ class _MyHomePageNewState extends State<MyHomePageNew> {
           padding: EdgeInsets.zero,
           children: [
             const Image(
-              image: NetworkImage(Constants.StaticImage),
+              image: NetworkImage(Constants.staticImage),
             ),
             Container(
               margin: const EdgeInsets.only(top: Dimens.twelve),
@@ -77,7 +77,7 @@ class _MyHomePageNewState extends State<MyHomePageNew> {
                   Row(mainAxisAlignment: MainAxisAlignment.start, children: [
                     CircleAvatar(
                       radius: Dimens.twenty,
-                      backgroundImage: NetworkImage(Constants.StaticImage),
+                      backgroundImage: NetworkImage(Constants.staticImage),
                     ),
                     SizedBox(
                       width: Dimens.twelve,
@@ -94,7 +94,7 @@ class _MyHomePageNewState extends State<MyHomePageNew> {
                     Image.asset(
                         height: Dimens.thirtyTwo,
                         width: Dimens.thirtyTwo,
-                        Constants.WhatsAppImage),
+                        Constants.whatsAppImage),
                     SizedBox(
                       width: Dimens.twelve,
                     ),
@@ -109,7 +109,7 @@ class _MyHomePageNewState extends State<MyHomePageNew> {
                   Row(mainAxisAlignment: MainAxisAlignment.start, children: [
                     CircleAvatar(
                       radius: Dimens.twenty,
-                      backgroundImage: NetworkImage(Constants.StaticImage),
+                      backgroundImage: NetworkImage(Constants.staticImage),
                     ),
                     SizedBox(
                       width: Dimens.twelve,
@@ -137,7 +137,7 @@ class _MyHomePageNewState extends State<MyHomePageNew> {
                   Row(mainAxisAlignment: MainAxisAlignment.start, children: [
                     CircleAvatar(
                       radius: Dimens.twenty,
-                      backgroundImage: NetworkImage(Constants.StaticImage),
+                      backgroundImage: NetworkImage(Constants.staticImage),
                     ),
                     SizedBox(
                       width: Dimens.twelve,
@@ -160,15 +160,15 @@ class _MyHomePageNewState extends State<MyHomePageNew> {
                         Image.asset(
                             height: Dimens.twentyEight,
                             width: Dimens.twentyEight,
-                            Constants.WhatsAppImage),
+                            Constants.whatsAppImage),
                         Image.asset(
                             height: Dimens.twentyEight,
                             width: Dimens.twentyEight,
-                            Constants.InstaImage),
+                            Constants.instagramImage),
                         Image.asset(
                             height: Dimens.twentyEight,
                             width: Dimens.twentyEight,
-                            Constants.YoutubeImage),
+                            Constants.youtubeImage),
                       ]),
                   SizedBox(height: Dimens.twelve),
                   Divider(
@@ -180,19 +180,17 @@ class _MyHomePageNewState extends State<MyHomePageNew> {
                     Image.asset(
                         height: Dimens.twentyEight,
                         width: Dimens.twentyEight,
-                        Constants.Logout),
+                        Constants.logout),
                     SizedBox(
                       width: Dimens.twelve,
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return Signupscreen();
-                        }));
+                        final auth = AuthService();
+                        auth.signOut();
                       },
                       child: Text(
-                        "Sign In / Sign Out",
+                        "Logout",
                         textAlign: TextAlign.center,
                       ),
                     ),

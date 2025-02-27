@@ -1,9 +1,9 @@
 class Constants {
-  static const String StaticImage = 'https://flutter.github'
+  static const String staticImage = 'https://flutter.github'
       '.io/assets-for-api-docs/assets/widgets/owl.jpg';
-  static const String WhatsAppImage = 'assets/whatsapp.png';
-  static const String InstaImage = 'assets/instagram.png';
-  static const String YoutubeImage = 'assets/youtube.png';
-  static const String Logout = 'assets/logout.png';
+  static const String whatsAppImage = 'assets/whatsapp.png';
+  static const String instagramImage = 'assets/instagram.png';
+  static const String youtubeImage = 'assets/youtube.png';
+  static const String logout = 'assets/logout.png';
   static const String hamburger = 'assets/menu.png';
 }

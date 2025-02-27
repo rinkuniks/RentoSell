@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learnflutter/screens/MyHomePageNew.dart';
+import 'package:learnflutter/screens/auth/auth_gate.dart';
 import 'package:learnflutter/screens/intro_screens/page_three.dart';
 import 'package:learnflutter/screens/intro_screens/page_two.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -13,7 +14,7 @@ class OnBoardingScreen extends StatefulWidget {
 }
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
-  PageController _controller = PageController();
+  final PageController _controller = PageController();
   bool onLastPage = false;
 
   @override
@@ -51,7 +52,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           onTap: () {
                             Navigator.pushReplacement(context,
                                 MaterialPageRoute(builder: (context) {
-                              return MyHomePageNew();
+                              return AuthGate();
                             }));
                           },
                           child: Text("Done"))
