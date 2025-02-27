@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:learnflutter/Constants/Dimens.dart';
 import 'package:learnflutter/components/my_button.dart';
 import 'package:learnflutter/components/my_text_field.dart';
+import 'package:learnflutter/screens/auth/signUp_screen.dart';
 import '../../components/square_tile.dart';
 import 'auth_service.dart';
 
-class Signupscreen extends StatelessWidget {
-  Signupscreen({super.key});
+class LoginScreen extends StatelessWidget {
+  LoginScreen({super.key});
 
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
@@ -139,10 +140,16 @@ class Signupscreen extends StatelessWidget {
                   const SizedBox(
                     width: Dimens.four,
                   ),
-                  Text(
-                    "Register Now",
-                    style: TextStyle(
-                        color: Colors.blue, fontWeight: FontWeight.bold),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder:
+                          (context) => SignUpScreen()));
+                    },
+                    child: Text(
+                      "Register Now",
+                      style: TextStyle(
+                          color: Colors.blue, fontWeight: FontWeight.bold),
+                    ),
                   )
                 ],
               )
