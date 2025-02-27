@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:learnflutter/screens/OnBoardingScreen.dart';
-import 'package:learnflutter/screens/auth/auth_gate.dart';
 import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatefulWidget {

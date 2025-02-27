@@ -1,7 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:learnflutter/Constants/Dimens.dart';
-import 'package:learnflutter/screens/auth/SignUpScreen.dart';
 import 'package:learnflutter/screens/auth/auth_service.dart';
 import 'package:learnflutter/screens/settings/settings_screen.dart';
 import '../Constants/Constants.dart';

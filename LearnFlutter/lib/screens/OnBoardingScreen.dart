@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:learnflutter/screens/MyHomePageNew.dart';
 import 'package:learnflutter/screens/auth/auth_gate.dart';
 import 'package:learnflutter/screens/intro_screens/page_three.dart';
 import 'package:learnflutter/screens/intro_screens/page_two.dart';
