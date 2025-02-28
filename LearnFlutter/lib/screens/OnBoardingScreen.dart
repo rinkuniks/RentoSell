@@ -1,8 +1,11 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:learnflutter/screens/auth/auth_gate.dart';
+import 'package:learnflutter/Constants/CommonComponents.dart';
+import 'package:learnflutter/Constants/Constants.dart';
 import 'package:learnflutter/screens/intro_screens/page_three.dart';
 import 'package:learnflutter/screens/intro_screens/page_two.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'auth/auth_gate.dart';
 import 'intro_screens/page_one.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -49,10 +52,15 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   onLastPage
                       ? GestureDetector(
                           onTap: () {
+                            CommonComponents.savePrefValues(
+                                Constants.ONBOARDING, true);
+                            if (kDebugMode) {
+                              print("-------Clicked Done-------");
+                            }
                             Navigator.pushReplacement(context,
                                 MaterialPageRoute(builder: (context) {
-                              return AuthGate();
-                            }));
+                                  return AuthGate();
+                                }));
                           },
                           child: Text("Done"))
                       : GestureDetector(

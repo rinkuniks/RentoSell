@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-
+import 'package:learnflutter/screens/PostProperty.dart';
 import '../Constants/Constants.dart';
 import '../Constants/Dimens.dart';
 import '../screens/auth/auth_service.dart';
@@ -17,7 +17,7 @@ class _MyDrawerState extends State<MyDrawer> {
   Widget build(BuildContext context) {
     return Drawer(
       child: Padding(
-        padding: const EdgeInsets.only(left: Dimens.twelve),
+        padding: const EdgeInsets.all(Dimens.twelve),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -59,9 +59,17 @@ class _MyDrawerState extends State<MyDrawer> {
                       SizedBox(
                         width: Dimens.twelve,
                       ),
-                      Text(
-                        "P O S T P R O P E R T Y",
-                        textAlign: TextAlign.center,
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context){
+                            return PostProperty();
+                          }));
+                        },
+                        child: Text(
+                          "P O S T P R O P E R T Y",
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ]),
                     SizedBox(
@@ -77,12 +85,9 @@ class _MyDrawerState extends State<MyDrawer> {
                             width: Dimens.twelve,
                           ),
                           Expanded(
-                            child: Padding(
-                              padding: const EdgeInsets.only(left: 8.0),
-                              child: Text(
-                                "P O S T P R O P E R T Y \nO N W H A T A S P P",
-                                textAlign: TextAlign.start,
-                              ),
+                            child: Text(
+                              "P O S T P R O P E R T Y \nO N W H A T A S P P",
+                              textAlign: TextAlign.start,
                             ),
                           ),
                         ]),
@@ -118,61 +123,69 @@ class _MyDrawerState extends State<MyDrawer> {
                       SizedBox(
                         width: Dimens.twelve,
                       ),
-                      Text(
-                        "H O M E P A G E",
-                        textAlign: TextAlign.center,
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.pop(context);
+                        },
+                        child: Text(
+                          "H O M E P A G E",
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ]),
                     Divider(
                       thickness: 1,
                       color: Colors.black26,
                     ),
-                    SizedBox(
-                      height: Dimens.twelve,
-                    ),
-                    Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Image.asset(
-                              height: Dimens.twentyEight,
-                              width: Dimens.twentyEight,
-                              Constants.whatsAppImage),
-                          Image.asset(
-                              height: Dimens.twentyEight,
-                              width: Dimens.twentyEight,
-                              Constants.instagramImage),
-                          Image.asset(
-                              height: Dimens.twentyEight,
-                              width: Dimens.twentyEight,
-                              Constants.youtubeImage),
-                        ]),
-                    SizedBox(height: Dimens.twelve),
                   ],
                 ),
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(bottom: Dimens.twenty),
-              child: Row(mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    Image.asset(
-                        height: Dimens.twentyEight,
-                        width: Dimens.twentyEight,
-                        Constants.logout),
-                    SizedBox(
-                      width: Dimens.twelve,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        final auth = AuthService();
-                        auth.signOut();
-                      },
-                      child: Text(
-                        "L O G O U T",
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ]),
+              padding: const EdgeInsets.only(bottom: Dimens.twelve),
+              child: Column(
+                children: [
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Image.asset(
+                            height: Dimens.twentyEight,
+                            width: Dimens.twentyEight,
+                            Constants.whatsAppImage),
+                        Image.asset(
+                            height: Dimens.twentyEight,
+                            width: Dimens.twentyEight,
+                            Constants.instagramImage),
+                        Image.asset(
+                            height: Dimens.twentyEight,
+                            width: Dimens.twentyEight,
+                            Constants.youtubeImage),
+                      ]),
+                  SizedBox(
+                    height: Dimens.twenty,
+                  ),
+                  Row(mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Image.asset(
+                            height: Dimens.twentyEight,
+                            width: Dimens.twentyEight,
+                            Constants.logout),
+                        SizedBox(
+                          width: Dimens.twelve,
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            final auth = AuthService();
+                            auth.signOut();
+                          },
+                          child: Text(
+                            "L O G O U T",
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ]),
+                ],
+              ),
             ),
           ],
         ),
